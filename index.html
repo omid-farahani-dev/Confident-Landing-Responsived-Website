@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/output.css" />
+    <link rel="stylesheet" href="./Styles/swiper-bundle.min.css">
+    <title>Document</title>
+  </head>
+  <body class="bg-sky-50">
+    <!-- Mobile & Tablet Header  -->
+     <header class="flex lg:hidden items-center justify-between pt-3.5 px-5 pb-3 mb-7 border-b border-b-blue-600/20">
+        <!-- Bar & Logo  -->
+        <div class="flex gap-x-3">
+                    <svg class="size-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+        </svg>
+        <div class="flex items-center gap-x-3">
+            <svg width="28" height="28" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1003_411)">
+<path d="M33.8389 4.75346C30.9154 1.7064 25.8907 0.208984 18.509 0.208984C11.1273 0.208984 6.1026 1.68898 3.17914 4.75346C1.00482 6.99957 0.0364272 10.0989 0.255686 13.9643C0.493217 17.9864 1.26062 21.7996 2.55791 25.3167C3.58112 28.12 4.91495 30.6796 6.50457 32.9083C8.33174 35.4678 10.0858 36.7737 11.7303 36.7737C12.6804 36.7737 14.0325 36.321 15.0557 34.1619C16.2068 31.7417 17.4493 30.3487 18.4907 30.3487C19.5322 30.3487 20.7747 31.7417 21.9258 34.1619C22.949 36.321 24.3011 36.7737 25.2512 36.7737C26.8957 36.7737 28.6498 35.4678 30.4769 32.9083C32.0666 30.6796 33.4004 28.12 34.4419 25.2993C35.7391 21.7822 36.5066 17.969 36.7441 13.9469C36.9633 10.0989 35.9949 6.99957 33.8389 4.75346ZM18.509 1.82828C20.7747 1.82828 22.8028 1.96757 24.5935 2.26357C27.6814 3.1864 29.7826 4.70122 30.0932 6.23345C30.2577 7.0344 29.8922 7.80051 28.9969 8.5144C28.193 9.15863 27.2611 9.47204 26.11 9.47204C23.9357 9.47204 21.4142 8.39251 18.7283 7.26075C16.6819 6.39016 14.5624 5.50216 12.5342 5.08428C11.4379 4.87534 10.3782 4.75346 9.35495 4.75346C7.38161 4.75346 5.62754 5.18875 4.22062 6.0071C4.25717 5.97228 4.31198 5.92004 4.34853 5.86781C6.96137 3.15157 11.5841 1.82828 18.509 1.82828ZM13.594 33.4829C13.0641 34.5972 12.4428 35.1718 11.7485 35.1718C10.7253 35.1718 9.30013 34.0226 7.85667 32.0029C3.85519 26.2396 2.41174 18.5262 4.54951 14.4518C5.18902 13.233 6.34013 12.5017 7.63741 12.5017C9.15396 12.5017 11.6572 13.4419 14.8912 17.8819C17.2666 21.1205 18.4542 24.6725 19.587 28.1026C19.6967 28.4335 19.8063 28.7817 19.9159 29.1125C19.4409 28.8687 18.9658 28.7469 18.4725 28.7469C16.7367 28.7469 15.074 30.3487 13.594 33.4829ZM35.0996 13.8772C34.5515 23.1403 31.1347 29.1996 29.1431 32.0029C27.6996 34.0226 26.2745 35.1718 25.2512 35.1718C24.5569 35.1718 23.9357 34.5972 23.4058 33.4829C23.3693 33.3958 23.3327 33.3262 23.2962 33.2391C22.4557 31.5153 21.8345 29.6175 21.1584 27.5977C19.9707 24.0457 18.7466 20.3718 16.2251 16.9417C12.5707 11.9445 9.53766 10.8998 7.63741 10.8998C5.7189 10.8998 4.01964 11.9445 3.10606 13.7205C2.64927 14.5563 2.33865 15.5313 2.15593 16.6109C2.0463 15.7403 1.95495 14.8349 1.90013 13.8946C1.86359 11.5092 2.52137 9.64616 3.83692 8.34028C5.11593 7.05181 7.03445 6.37275 9.35495 6.37275C10.2503 6.37275 11.2186 6.47722 12.2053 6.68616C14.069 7.05181 16.0972 7.9224 18.0705 8.75816C20.793 9.90734 23.6068 11.0913 26.11 11.0913C27.6266 11.0913 28.9421 10.656 30.0384 9.76804C31.3905 8.6711 31.9752 7.31298 31.7011 5.92004C31.6098 5.48475 31.427 5.04946 31.1712 4.61416C31.7194 4.99722 32.2127 5.39769 32.6512 5.8504C34.4967 7.80051 35.3006 10.4297 35.0996 13.8772Z" fill="url(#paint0_linear_1003_411)" stroke="url(#paint1_linear_1003_411)" stroke-width="0.25" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1003_411" x1="5.6058" y1="18.5" x2="42.0809" y2="18.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#001C81"/>
+<stop offset="1" stop-color="#3359DF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1003_411" x1="8.22185" y1="19.153" x2="40.1945" y2="18.1944" gradientUnits="userSpaceOnUse">
+<stop stop-color="#001C81"/>
+<stop offset="1" stop-color="#3359DF"/>
+</linearGradient>
+<clipPath id="clip0_1003_411">
+<rect width="37" height="37" fill="white"/>
+</clipPath>
+</defs>
+            </svg>
+            <div class="flex flex-col">
+                <span class="text-sm text-blue-800 font-MorabbaBold">کانفی دنت</span>
+                <span class="text-xs font-danaMedium text-blue-500">کلینینک دندان</span>
+            </div>
+        </div>
+        </div>
+        <!-- Search  -->
+         <div class="relative w-36 min-[430px]:w-52 sm:w-64 md:w-82 h-9 bg-white rounded-4xl">
+           <span class="pr-2 text-xs/9 font-danaMedium text-blue-700/40">چی میخوای رفیق؟</span>
+           <div class="absolute w-7 h-7 top-1 left-1.5 flex items-center justify-center bg-blue-600 rounded-full">
+            <svg class="size-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+           </svg>
+           </div>
+         </div>
+         <!-- Menu  -->
+       <div class="flex flex-col w-9/12 min-h-screen fixed top-0 -right-[1000px] bg-sky-100">
+        <!-- Logo & x Mark  -->
+         <div class="flex items-center justify-between w-full h-[70px] pr-6 pl-10 bg-sky-200">
+           <div class="flex items-center gap-x-3">
+            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1003_411)">
+<path d="M33.8389 4.75346C30.9154 1.7064 25.8907 0.208984 18.509 0.208984C11.1273 0.208984 6.1026 1.68898 3.17914 4.75346C1.00482 6.99957 0.0364272 10.0989 0.255686 13.9643C0.493217 17.9864 1.26062 21.7996 2.55791 25.3167C3.58112 28.12 4.91495 30.6796 6.50457 32.9083C8.33174 35.4678 10.0858 36.7737 11.7303 36.7737C12.6804 36.7737 14.0325 36.321 15.0557 34.1619C16.2068 31.7417 17.4493 30.3487 18.4907 30.3487C19.5322 30.3487 20.7747 31.7417 21.9258 34.1619C22.949 36.321 24.3011 36.7737 25.2512 36.7737C26.8957 36.7737 28.6498 35.4678 30.4769 32.9083C32.0666 30.6796 33.4004 28.12 34.4419 25.2993C35.7391 21.7822 36.5066 17.969 36.7441 13.9469C36.9633 10.0989 35.9949 6.99957 33.8389 4.75346ZM18.509 1.82828C20.7747 1.82828 22.8028 1.96757 24.5935 2.26357C27.6814 3.1864 29.7826 4.70122 30.0932 6.23345C30.2577 7.0344 29.8922 7.80051 28.9969 8.5144C28.193 9.15863 27.2611 9.47204 26.11 9.47204C23.9357 9.47204 21.4142 8.39251 18.7283 7.26075C16.6819 6.39016 14.5624 5.50216 12.5342 5.08428C11.4379 4.87534 10.3782 4.75346 9.35495 4.75346C7.38161 4.75346 5.62754 5.18875 4.22062 6.0071C4.25717 5.97228 4.31198 5.92004 4.34853 5.86781C6.96137 3.15157 11.5841 1.82828 18.509 1.82828ZM13.594 33.4829C13.0641 34.5972 12.4428 35.1718 11.7485 35.1718C10.7253 35.1718 9.30013 34.0226 7.85667 32.0029C3.85519 26.2396 2.41174 18.5262 4.54951 14.4518C5.18902 13.233 6.34013 12.5017 7.63741 12.5017C9.15396 12.5017 11.6572 13.4419 14.8912 17.8819C17.2666 21.1205 18.4542 24.6725 19.587 28.1026C19.6967 28.4335 19.8063 28.7817 19.9159 29.1125C19.4409 28.8687 18.9658 28.7469 18.4725 28.7469C16.7367 28.7469 15.074 30.3487 13.594 33.4829ZM35.0996 13.8772C34.5515 23.1403 31.1347 29.1996 29.1431 32.0029C27.6996 34.0226 26.2745 35.1718 25.2512 35.1718C24.5569 35.1718 23.9357 34.5972 23.4058 33.4829C23.3693 33.3958 23.3327 33.3262 23.2962 33.2391C22.4557 31.5153 21.8345 29.6175 21.1584 27.5977C19.9707 24.0457 18.7466 20.3718 16.2251 16.9417C12.5707 11.9445 9.53766 10.8998 7.63741 10.8998C5.7189 10.8998 4.01964 11.9445 3.10606 13.7205C2.64927 14.5563 2.33865 15.5313 2.15593 16.6109C2.0463 15.7403 1.95495 14.8349 1.90013 13.8946C1.86359 11.5092 2.52137 9.64616 3.83692 8.34028C5.11593 7.05181 7.03445 6.37275 9.35495 6.37275C10.2503 6.37275 11.2186 6.47722 12.2053 6.68616C14.069 7.05181 16.0972 7.9224 18.0705 8.75816C20.793 9.90734 23.6068 11.0913 26.11 11.0913C27.6266 11.0913 28.9421 10.656 30.0384 9.76804C31.3905 8.6711 31.9752 7.31298 31.7011 5.92004C31.6098 5.48475 31.427 5.04946 31.1712 4.61416C31.7194 4.99722 32.2127 5.39769 32.6512 5.8504C34.4967 7.80051 35.3006 10.4297 35.0996 13.8772Z" fill="url(#paint0_linear_1003_411)" stroke="url(#paint1_linear_1003_411)" stroke-width="0.25" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1003_411" x1="5.6058" y1="18.5" x2="42.0809" y2="18.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#001C81"/>
+<stop offset="1" stop-color="#3359DF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1003_411" x1="8.22185" y1="19.153" x2="40.1945" y2="18.1944" gradientUnits="userSpaceOnUse">
+<stop stop-color="#001C81"/>
+<stop offset="1" stop-color="#3359DF"/>
+</linearGradient>
+<clipPath id="clip0_1003_411">
+<rect width="37" height="37" fill="white"/>
+</clipPath>
+</defs>
+            </svg>
+            <div class="flex flex-col">
+                <span class="text-base text-blue-800 font-MorabbaBold">کانفی دنت</span>
+                <span class="text-sm font-danaMedium text-blue-500">کلینینک دندان</span>
+            </div>
+           </div>
+           <svg class="size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+           </svg>
+         </div>
+         <!-- Menu  -->
+          <ul class="space-y-6 mt-9 text-xl font-danaDemiBold">
+            <li class="border-b pb-4 border-b-blue-500/30">
+                <a class="pr-7 text-blue-600" href="">خانه</a>
+            </li>
+            <li class="border-b pb-4 border-b-blue-500/30">
+                <a class="pr-7 text-blue-950" href="">درباره ی ما</a>
+            </li>
+            <li class="border-b pb-4 border-b-blue-500/30">
+                <a class="pr-7 text-blue-950" href="">سرویس ها</a>
+            </li>
+            <li class="border-b pb-4 border-b-blue-500/30">
+                <a class="pr-7 text-blue-950" href="">دانستنی ها</a>
+            </li>
+            <li class="border-b pb-4 border-b-blue-500/30">
+                <a class="pr-7 text-blue-950" href="">ارتباط با ما</a>
+            </li>
+            <div class="flex flex-col gap-y-3.5 pb-4 text-base font-danaRegular border-b border-b-blue-500/30">
+                <span class="flex gap-x-2 pr-7 text-blue-950">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    خیابان ولیعصر , پلاک12
+                </span>
+                <span dir="ltr" class="flex gap-x-2 pr-7 text-blue-950 self-start">
+                    +98 912 120 0000
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+                </span>
+                <a class="flex gap-x-2 pr-7 text-blue-950">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                  </svg>
+                    ورود | ثبت نام
+                </a>
+            </div>
+          </ul>
+          <!-- Button  -->
+           <button class="flex justify-center items-center self-center w-37 h-12 mt-3.5 text-xl font-danaDemiBold bg-blue-600 text-white rounded-4xl">
+            رزرو وقت
+           </button>
+       </div>
+     </header>
+     <!-- Desktop Header  -->
+      <header class="hidden lg:flex flex-col gap-y-10 max-w-7xl mx-auto pt-5 max-xl:px-14">
+        <!-- Top  -->
+         <div class="flex items-center justify-between">
+          <!-- Logo  -->
+           <div class="flex items-center gap-x-2.5">
+            <img class="size-12" src="./src/img/Frame.svg" alt="">
+            <div class="flex flex-col">
+                <span class="text-xl text-blue-800 font-MorabbaBold">کانفی دنت</span>
+                <span class="text-base font-danaMedium text-blue-500">کلینینک دندان</span>
+            </div>
+           </div>
+           <!-- Left Side  -->
+           <div class="flex items-center justify-center gap-x-6">
+            <!-- Contact & Account  -->
+           <div class="flex items-center justify-center text-base font-danaRegular">
+                <span class="flex gap-x-2 pr-7 text-blue-950">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    خیابان ولیعصر , پلاک12
+                </span>
+                <span dir="ltr" class="flex gap-x-2 pr-7 text-blue-950 self-start">
+                    +98 912 120 0000
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+                </span>
+                <a class="flex gap-x-2 pr-7 text-blue-950">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                  </svg>
+                    ورود | ثبت نام
+                </a>
+           </div>
+            <!-- Button  -->
+           <button class="flex justify-center items-center w-37 h-12 text-xl font-danaDemiBold bg-blue-600 text-white rounded-4xl">
+            رزرو وقت
+           </button>
+           </div>
+         </div>
+         <!-- Bottom  -->
+          <div class="flex items-center justify-between w-full h-18 px-12 bg-sky-200 rounded-full">
+            <!-- Menu  -->
+             <ul class="flex items-center gap-x-10 text-lg font-danaDemiBold text-blue-950">
+              <li>
+                <a class="text-blue-600" href="">خانه</a>
+              </li>
+              <li>
+                <a href="">درباره ی ما</a>
+              </li>
+              <li class="group">
+                <a class="flex items-center gap-x-2.5" href="">سرویس ها
+                  <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                   </svg>
+                </a>
+                <div class="absolute flex flex-col gap-y-2 w-42 min-h-32 mt-2.5 py-3 pr-6 bg-white rounded-2xl shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 delay-75">
+                  <a class="hover:text-blue-600 transition-colors duration-150" href="">ایمپلنت</a>
+                  <a class="hover:text-blue-600 transition-colors duration-150" href="">کامپوزیت</a>
+                  <a class="hover:text-blue-600 transition-colors duration-150" href="">جرم گیری</a>
+                  <a class="hover:text-blue-600 transition-colors duration-150" href="">عصب کشی</a>
+                  <a class="hover:text-blue-600 transition-colors duration-150" href="">پر کردن دندان</a>
+                </div>
+              </li>
+              <li>
+                <a href="">دانستنی ها</a>
+              </li>
+              <li>
+                <a href="">ارتباط با ما</a>
+              </li>
+             </ul>
+          <div class="relative  w-64 h-12 bg-white rounded-4xl">
+           <span class="pr-4 text-lg/12 font-danaMedium text-blue-700/40">چی میخوای رفیق؟</span>
+           <div class="absolute w-10 h-10 top-1 left-1.5 flex items-center justify-center bg-blue-600 rounded-full cursor-pointer">
+            <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+           </svg>
+           </div>
+         </div>
+          </div>
+      </header>
+      <!-- App Main  -->
+      <main class="px-7 sm:px-12 lg:px-12 max-w-7xl mx-auto">
+        <!-- Welcome Section  -->
+         <section class="flex flex-col lg:flex-row justify-around xl:justify-between items-center gap-y-12 mt-18">
+          <!-- Content & Button -->
+          <div class="flex flex-col gap-y-8">
+            <div class="flex flex-col gap-y-4">
+              <span class="sm:text-xl font-danaMedium text-orange-400">به کانفی دنت خوش آمدید</span>
+              <h5 class="text-3xl/12 sm:text-5xl/18 lg:text-4xl/13 xl:text-5xl/18 font-MorabbaBold text-blue-950">دندان پزشکی <br><span class="text-blue-600">بدون درد</span> و با کیفیت بالا </h5>
+              <p class="text-xs/5 sm:text-base/7 lg:w-[500px] max-[1024px]:text-justify font-danaRegular">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+            </div>
+            <div class="flex items-center gap-x-10">
+            <button class="flex justify-center items-center w-32 sm:w-42 h-9 sm:h-11 text-lg sm:text-2xl font-danaDemiBold bg-blue-600 text-white rounded-4xl">
+            ارتباط با ما
+           </button>
+           <div class="flex items-center gap-x-2.5">
+            <div class="flex items-center justify-center size-7 sm:size-11 border border-orange-400 rounded-full">
+            <svg class="flex items-center justify-center size-5 sm:size-8 text-orange-400" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+            </svg>
+            </div>
+            <span class="text-base sm:text-xl font-danaMedium text-black/70">تیزر مارو دیدی؟</span>
+           </div>
+            </div>
+          </div>
+          <!-- Hero Image -->
+           <img class="lg:size-[440px] xl:size-[550px]" src="./src/img/Hero.png" alt="">
+         </section>
+         <!-- Brand Section -->
+          <section class="flex flex-col items-center gap-y-6 lg:gap-y-12 mt-12">
+            <span class="sm:text-lg md:text-xl lg:text-2xl font-danaDemiBold text-orange-400">شرک های تجاری ما</span>
+              <!-- Swiper -->
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img class="w-36 lg:w-47" src="./src/img/logo1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="w-36 lg:w-47" src="./src/img/logo2.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="w-36 lg:w-47" src="./src/img/logo3.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="w-36 lg:w-47" src="./src/img/logo4.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="w-36 lg:w-47" src="./src/img/logo5.png" alt="">
+      </div>
+            </div>
+            </div>
+          </section>
+          <!-- About Us Section -->
+           <section class="flex flex-col lg:items-center lg:flex-row lg:justify-center lg:gap-x-18 mt-12 ">
+            <img class="lg:size-[450px]" src="./src/img/AboutUs.png" alt="">
+            <div class="flex flex-col gap-y-6 xl:gap-y-8">
+              <span class="text-lg min-[500px]:text-xl xl:text-3xl font-danaDemiBold text-orange-400">درباره ی ما</span>
+              <h5 class="text-2xl/9 min-[500px]:text-3xl/12 xl:text-5xl/14 font-MorabbaBold text-blue-950">
+                کافی دنت <span class="text-blue-600">شریک معتمد</span> شما برای سلامت دندان هایتان
+              </h5>
+              <p class="text-sm min-[500px]:text-base xl:text-lg font-danaRegular text-blue-950/90">تیم ما متعهد به ارائه بهترین مراقبت های دندانپزشکی ممکن برای شماست. لبخند سالم,لبخندی شاد است . </p>
+              <div class="flex flex-col min-[500px]:flex-row gap-y-3 gap-x-12 min-[500px]:text-lg xl:text-xl text-blue-950">
+                <div class="flex flex-col gap-y-3">
+                                  <span class="flex items-center gap-x-1.5 min-[500px]:w-[] font-danaMedium">
+                  <svg class="size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                   </svg>
+                  محیطی راحت
+                </span>
+                <span class="flex items-center gap-x-1.5 min-[500px]: font-danaMedium">
+                  <svg class="size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                   </svg>
+                  تجهیزات مدرن
+                </span>
+                </div>
+                <div class="flex flex-col gap-y-3">
+                  <span class="flex items-center gap-x-1.5 min-[500px]: font-danaMedium">
+                  <svg class="size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                   </svg>
+                  همیشه تحت نظارت
+                </span>
+                  <span class="flex items-center gap-x-1.5 min-[500px]: font-danaMedium">
+                  <svg class="size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                   </svg>
+                  نوبت دهی آنلاین و آسان
+                </span>
+                </div>
+              </div>
+              <span class="flex items-center text-lg xl:text-xl font-danaDemiBold text-blue-600">
+                بیشتر بدانید
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+              </span>
+           </section>
+           <!-- Offer Section  -->
+            <section class="flex flex-col gap-y-8 bg-sky-200 w-full mt-12 py-8 rounded-3xl">
+              <div class="flex flex-col items-center gap-y-4">
+                <span class="font-danaDemiBold text-orange-400">آنچه ما ارائه میدهیم</span>
+                <h5 class="text-lg text-center font-MorabbaBold text-blue-950">کدام <span class="text-blue-600">درمان ها را</span><br>به شما پیشنهاد میکنیم</h5>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 px-6 [&>*]:rounded-lg">
+                <div class="flex-flex-col space-y-3 py-6 px-5 sm:col-span-2 lg:col-span-3 bg-white shadow">
+                  <div class="flex items-center justify-center size-[50px] p-2 bg-blue-100 rounded-xl">
+                    <svg class="size-[45px]" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.5762 41.651C26.6056 40.9666 26.8967 40.32 27.3887 39.8462C27.8808 39.3723 28.5357 39.1078 29.217 39.1078C29.8982 39.1078 30.5532 39.3723 31.0452 39.8462C31.5372 40.32 31.8283 40.9666 31.8577 41.651C32.0121 48.1347 34.066 53.2591 36.5678 53.2591C39.1699 53.2591 41.2855 47.7223 41.2855 40.8873C41.2869 39.6839 41.2192 38.4814 41.0826 37.2858C40.9955 36.4645 41.0789 35.6341 41.3274 34.8469C41.576 34.0597 41.9843 33.333 42.5265 32.7127C44.6328 30.1402 45.7611 26.8986 45.7099 23.5668C45.7099 16.5867 41.1157 10.9354 35.4404 10.9354C34.2294 10.9365 33.0323 11.1948 31.9274 11.6934C31.1302 12.0503 30.2672 12.2347 29.3946 12.2347C28.5219 12.2347 27.659 12.0503 26.8617 11.6934C25.7568 11.1948 24.5597 10.9365 23.3487 10.9354C17.6812 10.9354 13.0792 16.5867 13.0792 23.5668C13.0353 26.7839 14.0848 29.9198 16.0541 32.4556C16.568 33.0727 16.9519 33.7885 17.1823 34.5594C17.4127 35.3303 17.4848 36.1402 17.3942 36.94C17.2287 38.2492 17.1466 39.5676 17.1484 40.8873C17.1484 47.7223 19.2641 53.2591 21.8662 53.2591C24.3679 53.2591 26.4218 48.1347 26.5762 41.651Z" stroke="#45CDF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 55.2058C6.99674 52.0557 12.0681 49.3697 17.8051 47.14C20.5652 46.0646 23.4821 45.0927 26.3989 44.2344C28.2494 43.6761 30.0894 43.1694 31.8981 42.7041C35.2645 41.8355 38.4741 41.1117 41.2864 40.5429C44.8201 39.7984 47.716 39.2918 49.4306 39.0126C49.8862 38.939 50.3011 38.7054 50.6016 38.3532C50.9021 38.0011 51.0688 37.5533 51.072 37.0893V37.0066C51.0528 36.5455 50.8724 36.106 50.5625 35.7655C50.2527 35.425 49.8334 35.2054 49.3783 35.1453L41.6524 34.0596" stroke="#45CDF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.6373 30.244L8.32266 29.3547C7.69571 29.2721 7.11988 28.9635 6.70218 28.4861C6.28308 28.018 6.05204 27.4099 6.05397 26.78C6.06023 26.0888 6.33689 25.4278 6.82408 24.9402C7.31126 24.4525 7.9698 24.1773 8.6572 24.1742C10.1836 24.1639 11.6577 24.1329 13.09 24.0915C28.0612 23.6676 38.2545 21.8787 45.1651 19.5004C54.875 16.1634 58.1034 11.6739 59 8.20575" stroke="#45CDF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-danaDemiBold text-blue-950">کود دهی دندان</span>
+                  <p class="text-xs/5 font-danaMedium text-blue-950/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <span class="flex items-center text-sm font-danaDemiBold text-blue-600">
+                بیشتر بدانید
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+                 </span>
+                </div>
+                <div class="flex-flex-col space-y-3 py-6 px-5 lg:col-span-3 bg-white shadow">
+                  <div class="flex items-center justify-center size-[50px] p-2 bg-orange-200 rounded-xl">
+                    <svg class="size-[40px]" width="56" height="50" viewBox="0 0 56 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6201 10.4533H16.8544C19.7705 10.4533 22.5672 11.7716 24.6292 14.1182C26.6912 16.4648 27.8496 19.6475 27.8496 22.9661V46.0738C27.8496 46.6344 27.6539 47.172 27.3056 47.5684C26.9573 47.9648 26.4849 48.1875 25.9923 48.1875H7.48218C6.98959 48.1875 6.51718 47.9648 6.16887 47.5684C5.82056 47.172 5.62488 46.6344 5.62488 46.0738V22.9661C5.62488 19.6475 6.7833 16.4648 8.8453 14.1182C10.9073 11.7716 13.704 10.4533 16.6201 10.4533Z" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.8448 10.4533H39.0791C41.9952 10.4533 44.7919 11.7716 46.8539 14.1182C48.9159 16.4648 50.0743 19.6475 50.0743 22.9661V46.0738C50.0743 46.6344 49.8786 47.172 49.5303 47.5684C49.182 47.9648 48.7096 48.1875 48.217 48.1875H29.7069C29.2143 48.1875 28.7419 47.9648 28.3936 47.5684C28.0453 47.172 27.8496 46.6344 27.8496 46.0738V22.9661C27.8496 19.6475 29.008 16.4648 31.07 14.1182C33.132 11.7716 35.9287 10.4533 38.8448 10.4533Z" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.12526 19.2228H3.74235C3.49564 19.2238 3.25121 19.1692 3.02312 19.0622C2.79502 18.9552 2.58779 18.7979 2.41334 18.5994C2.23889 18.4009 2.10068 18.165 2.00666 17.9055C1.91265 17.6459 1.86469 17.3677 1.86555 17.087V3.82333C1.86469 3.54257 1.91265 3.2644 2.00666 3.00483C2.10068 2.74526 2.23889 2.50942 2.41333 2.31089C2.58778 2.11237 2.79502 1.95508 3.02311 1.84809C3.2512 1.7411 3.49564 1.68652 3.74234 1.6875H51.9577C52.2044 1.68652 52.4488 1.7411 52.6769 1.84809C52.905 1.95508 53.1122 2.11236 53.2867 2.31089C53.4611 2.50941 53.5993 2.74525 53.6934 3.00483C53.7874 3.2644 53.8353 3.54257 53.8345 3.82333V17.0869C53.8353 17.3677 53.7874 17.6459 53.6934 17.9054C53.5993 18.165 53.4611 18.4009 53.2867 18.5994C53.1122 18.7979 52.905 18.9552 52.6769 19.0622C52.4488 19.1692 52.2044 19.2237 51.9577 19.2228H49.5737" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.7248 26.094H11.75C10.7242 26.094 9.8927 27.0403 9.8927 28.2076V34.2112C9.8927 35.3785 10.7242 36.3248 11.75 36.3248H21.7248C22.7506 36.3248 23.5821 35.3785 23.5821 34.2112V28.2076C23.5821 27.0403 22.7506 26.094 21.7248 26.094Z" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M43.9493 26.094H33.9745C32.9487 26.094 32.1172 27.0403 32.1172 28.2076V34.2112C32.1172 35.3785 32.9487 36.3248 33.9745 36.3248H43.9493C44.975 36.3248 45.8066 35.3785 45.8066 34.2112V28.2076C45.8066 27.0403 44.975 26.094 43.9493 26.094Z" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.20898 31.2094H9.89256" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45.8065 31.2094H54.4901" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.582 31.2094H32.1173" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.7374 29.1805V33.2383" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.9127 31.2094H18.5616" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.9619 29.263V33.3209" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M37.1374 31.2919H40.7863" stroke="#FF9140" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-danaDemiBold text-blue-950">ارتودنسی</span>
+                  <p class="text-xs/5 font-danaMedium text-blue-950/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <span class="flex items-center text-sm font-danaDemiBold text-blue-600">
+                بیشتر بدانید
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+                 </span>
+                </div>
+                <div class="flex-flex-col space-y-3 py-6 px-5 lg:col-span-2 bg-white shadow">
+                  <div class="flex items-center justify-center size-[50px] p-2 bg-sky-100 rounded-xl">
+                   <svg class="size-[45px]" width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43.1768 5.3568C40.3311 6.20065 37.8857 7.77964 36.1993 9.86222C34.5128 11.9448 33.674 14.4214 33.8059 16.9289C33.9377 19.4364 35.0332 21.8428 36.9318 23.7954C38.8304 25.7479 41.4322 27.1438 44.3556 27.7783C43.8853 28.7514 43.7179 29.8072 43.8691 30.8482C44.0718 32.2329 44.1718 33.6267 44.1685 35.0216C44.1685 42.2416 41.5956 48.0938 38.4238 48.0938C35.3736 48.0938 32.8755 42.6846 32.6884 35.8299C32.691 35.4774 32.6097 35.128 32.4491 34.8017C32.2886 34.4754 32.0519 34.1787 31.7528 33.9287C31.4537 33.6786 31.098 33.4802 30.7061 33.3448C30.3143 33.2094 29.8942 33.1397 29.4698 33.1397C29.0454 33.1397 28.6253 33.2094 28.2334 33.3448C27.8416 33.4802 27.4859 33.6786 27.1868 33.9287C26.8877 34.1787 26.651 34.4754 26.4904 34.8017C26.3299 35.128 26.2486 35.4774 26.2512 35.8299C26.0641 42.6846 23.566 48.0938 20.5158 48.0938C17.3441 48.0938 14.7711 42.2416 14.7711 35.0216C14.7693 33.7495 14.8505 32.4783 15.0143 31.2135C15.1236 30.3522 15.0242 29.4815 14.7221 28.6526C14.4201 27.8238 13.9213 27.0535 13.2553 26.3872C10.6726 23.6266 9.30558 20.2147 9.38181 16.7191C9.38183 9.34372 14.9769 3.375 21.8912 3.375C23.3701 3.37662 24.8303 3.64998 26.167 4.17549C27.1317 4.55168 28.1843 4.74671 29.2499 4.74671C30.3156 4.74671 31.3682 4.55168 32.3328 4.17549C33.6726 3.64913 35.136 3.37576 36.618 3.375C39.0126 3.39409 41.3271 4.09345 43.1768 5.3568Z" stroke="#2952CE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46.2923 25.1826C48.1831 22.6414 49.1662 19.7064 49.1273 16.7191C49.1782 13.513 48.0344 10.3723 45.8526 7.7272C41.4551 9.39814 38.4705 12.639 38.4705 16.3772C38.4705 20.232 41.6516 23.5738 46.2923 25.1826Z" stroke="#2952CE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.4128 13.1872C16.4984 10.9886 18.319 9.09395 20.6593 7.7272" stroke="#2952CE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                   </svg>
+                  </div>
+                  <span class="font-danaDemiBold text-blue-950">کود دهی دندان</span>
+                  <p class="text-xs/5 font-danaMedium text-blue-950/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <span class="flex items-center text-sm font-danaDemiBold text-blue-600">
+                بیشتر بدانید
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+                 </span>
+                </div>
+                <div class="flex-flex-col space-y-3 py-6 px-5 lg:col-span-2 bg-white shadow">
+                  <div class="flex items-center justify-center size-[50px] p-2 bg-amber-100 rounded-xl">
+                    <svg class="size-[45px]" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.43751 38.3602V45.8015C3.4554 47.1168 3.99408 48.3713 4.93547 49.2901C5.87686 50.2088 7.14414 50.7168 8.45948 50.7027H45.6642C46.9822 50.7203 48.2532 50.2139 49.198 49.2949C50.1428 48.3759 50.6842 47.1194 50.7031 45.8015V37.5078C50.7031 40.798 48.0528 44.3269 44.7864 44.3269C42.4991 44.3269 40.5157 43.8155 39.5366 42.3749C39.4634 42.2631 39.3631 42.1717 39.245 42.1091C39.127 42.0465 38.995 42.0148 38.8614 42.017C38.7352 42.0228 38.6121 42.0582 38.5021 42.1204C38.3922 42.1826 38.2984 42.2698 38.2283 42.3749C37.2408 43.8155 35.2574 44.3269 32.97 44.3269C30.6827 44.3269 28.6993 43.8155 27.7202 42.3749C27.6483 42.2674 27.551 42.1792 27.4369 42.1183C27.3228 42.0573 27.1954 42.0254 27.0661 42.0254C26.9367 42.0254 26.8093 42.0573 26.6952 42.1183C26.5811 42.1792 26.4838 42.2674 26.4119 42.3749C25.4244 43.8155 23.441 44.3269 21.1537 44.3269C18.8663 44.3269 16.8829 43.8155 15.9038 42.3749C15.8338 42.2698 15.74 42.1826 15.63 42.1204C15.52 42.0582 15.397 42.0228 15.2708 42.017C15.1372 42.0148 15.0052 42.0465 14.8871 42.1091C14.769 42.1717 14.6687 42.2631 14.5956 42.3749C13.608 43.8155 11.6246 44.3269 9.33727 44.3269C7.76399 44.317 6.25895 43.6831 5.15274 42.5643C4.04654 41.4456 3.42962 39.9335 3.43751 38.3602Z" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.8613 30.8678V42.0169C38.9949 42.0148 39.1269 42.0465 39.2449 42.1091C39.363 42.1717 39.4633 42.2631 39.5365 42.3749C40.5156 43.8155 42.499 44.3269 44.7863 44.3269C48.0527 44.3269 50.703 40.798 50.703 37.5078V30.8678H38.8613Z" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.0703 30.8678V42.0254C27.1988 42.0266 27.3251 42.059 27.4384 42.1199C27.5516 42.1808 27.6483 42.2683 27.7202 42.3749C28.6992 43.8155 30.6827 44.3269 32.97 44.3269C35.2573 44.3269 37.2408 43.8155 38.2283 42.3749C38.2983 42.2698 38.3921 42.1826 38.5021 42.1204C38.6121 42.0582 38.7351 42.0228 38.8613 42.0169V30.8678H27.0703Z" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.2706 30.8678V42.0169C15.3968 42.0228 15.5199 42.0582 15.6299 42.1204C15.7398 42.1826 15.8336 42.2698 15.9037 42.3749C16.8827 43.8155 18.8662 44.3269 21.1535 44.3269C23.4408 44.3269 25.4243 43.8155 26.4118 42.3749C26.484 42.2667 26.5819 42.1781 26.6969 42.1171C26.8118 42.0561 26.94 42.0246 27.0701 42.0254V30.8678H15.2706Z" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.43751 30.8678V38.3602C3.42962 39.9335 4.04654 41.4456 5.15274 42.5643C6.25895 43.6831 7.76399 44.317 9.33727 44.3269C11.6246 44.3269 13.608 43.8155 14.5956 42.3749C14.6687 42.2631 14.769 42.1717 14.8871 42.1091C15.0052 42.0465 15.1372 42.0148 15.2708 42.0169V30.8678H3.43751Z" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39.427 3.4375H34.2216C33.9977 3.4375 33.7831 3.52642 33.6248 3.68471C33.4665 3.84299 33.3776 4.05767 33.3776 4.28152V8.74659C33.3776 8.96899 33.4653 9.18241 33.6218 9.34045L36.9761 12.7278L40.0275 9.64622C40.184 9.48815 40.2718 9.27467 40.2718 9.05222L40.271 4.28139C40.271 4.05756 40.182 3.84292 40.0237 3.68466C39.8655 3.5264 39.6508 3.4375 39.427 3.4375Z" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.976 12.7278V16.7122" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.12396 6.73106L11.6065 6.94381C15.6148 7.13404 19.6319 6.90269 23.5918 6.25357L33.3777 4.64944" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.12396 14.1611C14.0737 14.1611 20.9654 12.8969 27.4626 10.43L33.3777 8.18417" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.9198 6.3596V11.9408" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.2778 16.7122H39.6743C39.849 16.7122 40.0194 16.7664 40.1619 16.8673C40.3045 16.9682 40.4123 17.1109 40.4703 17.2757L42.4645 22.936C42.5541 23.1905 42.5815 23.4629 42.5442 23.7302C42.5069 23.9975 42.406 24.2519 42.2501 24.4722C42.0941 24.6925 41.8876 24.8722 41.6479 24.9962C41.4082 25.1202 41.1422 25.1849 40.8723 25.1849H33.0797C32.8098 25.1849 32.5439 25.1202 32.3041 24.9962C32.0644 24.8722 31.8579 24.6925 31.702 24.4722C31.546 24.2519 31.4452 23.9975 31.4079 23.7302C31.3706 23.4629 31.3979 23.1905 31.4876 22.936L33.4817 17.2757C33.5397 17.1109 33.6475 16.9682 33.7901 16.8673C33.9327 16.7664 34.1031 16.7122 34.2778 16.7122Z" stroke="#F9CD3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-danaDemiBold text-blue-950">کود دهی دندان</span>
+                  <p class="text-xs/5 font-danaMedium text-blue-950/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <span class="flex items-center text-sm font-danaDemiBold text-blue-600">
+                بیشتر بدانید
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+                 </span>
+                </div>
+                <div class="flex-flex-col space-y-3 py-6 px-5 lg:col-span-2 bg-white shadow">
+                  <div class="flex items-center justify-center size-[50px] p-2 bg-orange-700/20 rounded-xl">
+                    <svg class="size-[45px]" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.8089 24.4824C26.8294 24.0176 27.0286 23.5785 27.365 23.2568C27.7014 22.9351 28.1491 22.7555 28.6148 22.7555C29.0804 22.7555 29.5281 22.9351 29.8645 23.2568C30.2009 23.5785 30.4002 24.0176 30.4206 24.4824C30.5262 28.8852 31.9308 32.3649 33.6416 32.3649C35.4211 32.3649 36.8679 28.6052 36.8679 23.9638C36.8689 23.1466 36.8225 22.3301 36.7291 21.5182C36.6696 20.9605 36.7266 20.3965 36.8966 19.862C37.0666 19.3274 37.3458 18.834 37.7166 18.4129C39.1568 16.6665 39.9284 14.4651 39.8935 12.2024C39.8935 7.46252 36.7517 3.625 32.8707 3.625C32.0426 3.62577 31.224 3.80118 30.4683 4.13974C29.9231 4.38208 29.333 4.5073 28.7362 4.5073C28.1395 4.5073 27.5494 4.38208 27.0041 4.13974C26.2485 3.80118 25.4298 3.62577 24.6017 3.625C20.726 3.625 17.5789 7.46252 17.5789 12.2024C17.549 14.3872 18.2667 16.5167 19.6133 18.2383C19.9647 18.6572 20.2272 19.1432 20.3848 19.6667C20.5423 20.1902 20.5917 20.7403 20.5298 21.2835C20.4166 22.1724 20.3604 23.0677 20.3616 23.9638C20.3616 28.6052 21.8084 32.3649 23.5879 32.3649C25.2987 32.3649 26.7033 28.8852 26.8089 24.4824Z" stroke="#D17633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.0691 11.3597C35.4744 9.94121 34.4846 8.72323 33.2173 7.85066" stroke="#D17633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.4162 42.6679L9.18156 32.3641V19.4996C9.17518 18.7717 8.87973 18.0762 8.36019 17.5659C7.84066 17.0557 7.13958 16.7725 6.41116 16.7788C5.68274 16.7725 4.98166 17.0557 4.46212 17.5659C3.94258 18.0761 3.64713 18.7717 3.64075 19.4996V31.4843C3.64097 32.0628 3.78572 32.6321 4.06188 33.1405L11.131 46.1736C11.6143 47.0633 11.8676 48.0595 11.868 49.0719V51.7074C11.8721 52.1786 12.0634 52.6289 12.3997 52.9592C12.736 53.2895 13.1899 53.4728 13.6614 53.4687H21.4081C21.8796 53.4728 22.3335 53.2895 22.6698 52.9592C23.0061 52.6289 23.1974 52.1786 23.2015 51.7074V40.5816C23.2008 40.1175 23.1075 39.6582 22.9271 39.2305C22.7468 38.8028 22.4829 38.4154 22.1509 38.0908L14.6232 30.6977C14.136 30.2227 13.4839 29.9541 12.8032 29.9484C12.1225 29.9426 11.4659 30.2 10.9707 30.6667C10.4894 31.1195 10.2048 31.7426 10.1776 32.4026C10.1503 33.0626 10.3828 33.7069 10.8251 34.1978L18.4162 42.6679Z" stroke="#D17633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.7091 42.6671L47.9437 32.3633V19.4989C47.9501 18.771 48.2455 18.0754 48.7651 17.5651C49.2846 17.0549 49.9857 16.7718 50.7141 16.778C51.4425 16.7718 52.1436 17.0549 52.6632 17.5651C53.1827 18.0754 53.4781 18.771 53.4845 19.4989V31.4836C53.4843 32.062 53.3396 32.6313 53.0634 33.1397L45.9943 46.1729C45.511 47.0626 45.2577 48.0588 45.2573 49.0711V51.7067C45.2531 52.1779 45.0619 52.6281 44.7256 52.9584C44.3893 53.2887 43.9354 53.472 43.4639 53.4679H35.7172C35.2457 53.472 34.7918 53.2887 34.4555 52.9584C34.1192 52.6281 33.928 52.1779 33.9238 51.7067V40.5809C33.9245 40.1168 34.0178 39.6575 34.1981 39.2298C34.3785 38.8021 34.6424 38.4147 34.9744 38.0901L42.5021 30.697C42.9893 30.2219 43.6414 29.9534 44.3221 29.9477C45.0028 29.9419 45.6594 30.1993 46.1546 30.666C46.6358 31.1188 46.9205 31.7419 46.9477 32.4019C46.9749 33.0618 46.7425 33.7062 46.3002 34.1971L38.7091 42.6671Z" stroke="#D17633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-danaDemiBold text-blue-950">کود دهی دندان</span>
+                  <p class="text-xs/5 font-danaMedium text-blue-950/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <span class="flex items-center text-sm font-danaDemiBold text-blue-600">
+                بیشتر بدانید
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+                 </span>
+                </div>
+              </div>
+            </section> 
+            <!-- Record -->
+             <section class="services relative grid grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-12 py-12 px-5 bg-white rounded-3xl">
+              <div class="text-center border-l-2 border-gray-300 ">
+                <h6 class="relative text-8xl font-MorabbaBold text-sky-300/80">74
+                  <span class="absolute inset-7 text-2xl font-MorabbaBold text-blue-950">کلینینک</span>
+                </h6>
+              </div>
+              <div class="text-center min-[1024px]:border-l-2 border-gray-300 ">
+                <h6 class="relative text-8xl font-MorabbaBold text-sky-300/80">20
+                  <span class="absolute inset-7 text-2xl font-MorabbaBold text-blue-950">کشور</span>
+                </h6>
+              </div>
+              <div class="text-center border-l-2 border-gray-300 ">
+                <h6 class="relative text-8xl font-MorabbaBold text-sky-300/80">19
+                  <span class="absolute inset-7 text-2xl font-MorabbaBold text-blue-950">سال</span>
+                </h6>
+              </div>
+              <div class="text-center">
+                <h6 class="relative text-8xl font-MorabbaBold text-sky-300/80">40
+                  <span class="absolute inset-7 text-2xl font-MorabbaBold text-blue-950">پارتنر</span>
+                </h6>
+              </div>
+             </section>
+             <!-- Team Slider  -->
+              <section class="flex flex-col items-center gap-y-16 py-8 mt-12">
+                <!-- Header -->
+                <div class="flex flex-col items-center gap-y-2.5">
+                  <span class="text-lg font-danaDemiBold text-orange-400">بهترین پزشکان ما</span>
+                  <h5 class="text-center text-3xl font-MorabbaBold text-blue-950">درمان خود را به <span class="text-blue-600">پزشکان مجرب</span> ما بسپارید</h5>
+                </div>
+                <!-- Card  -->
+                <div class="flex flex-col lg:flex-row items-center lg:gap-x-6 gap-y-8">
+                  <div class="flex flex-col items-center w-10/12 max-h-[390px] py-3 px-5 bg-sky-100 rounded-3xl">
+                <img class="rounded-3xl" src="./src/img/dentist/dentist1.png.png" alt="">
+                <!-- Info -->
+                <div class="group flex flex-col items-center gap-y-3 w-10/12 min-h-12 -mt-4 hover:-mt-13 py-4 bg-white rounded-lg">
+                  <div class="flex flex-col items-center gap-y-1">
+                    <span class="font-danaDemiBold text-blue-600">دکتر آدولف هیتلر</span>
+                    <span class="text-xs font-danaMedium text-blue-950">دندانپزشک ارشد</span>
+                  </div>
+                  <!-- Hover  -->
+                   <div class="hidden items-center justify-center gap-x-3 w-full h-5 group-hover:flex">
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="20" height="21" viewBox="0 0 20 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99731 5.37438C7.15795 5.37438 4.86644 7.66604 4.86644 10.5056C4.86644 13.3451 7.15795 15.6368 9.99731 15.6368C12.8367 15.6368 15.1282 13.3451 15.1282 10.5056C15.1282 7.66604 12.8367 5.37438 9.99731 5.37438ZM9.99731 13.8405C8.16111 13.8405 6.66262 12.3419 6.66262 10.5056C6.66262 8.66926 8.16111 7.17068 9.99731 7.17068C11.8335 7.17068 13.332 8.66926 13.332 10.5056C13.332 12.3419 11.8335 13.8405 9.99731 13.8405ZM15.3383 3.96837C14.6754 3.96837 14.14 4.50376 14.14 5.16673C14.14 5.82971 14.6754 6.3651 15.3383 6.3651C16.0013 6.3651 16.5366 5.83221 16.5366 5.16673C16.5368 5.00931 16.5059 4.85339 16.4458 4.70791C16.3856 4.56242 16.2974 4.43024 16.1861 4.31892C16.0748 4.2076 15.9426 4.11934 15.7971 4.05919C15.6516 3.99903 15.4957 3.96817 15.3383 3.96837ZM19.9989 10.5056C19.9989 9.12459 20.0114 7.7561 19.9338 6.37761C19.8563 4.77645 19.4911 3.35543 18.3203 2.18458C17.147 1.01124 15.7286 0.648474 14.1275 0.570918C12.7466 0.493362 11.3782 0.505871 9.99981 0.505871C8.61891 0.505871 7.25051 0.493362 5.8721 0.570918C4.27105 0.648474 2.85012 1.01374 1.67935 2.18458C0.506076 3.35793 0.143338 4.77645 0.0657868 6.37761C-0.0117642 7.7586 0.000744099 9.12709 0.000744099 10.5056C0.000744099 11.8841 -0.0117642 13.2551 0.0657868 14.6336C0.143338 16.2347 0.508578 17.6557 1.67935 18.8266C2.85262 19.9999 4.27105 20.3627 5.8721 20.4403C7.25301 20.5178 8.62141 20.5053 9.99981 20.5053C11.3807 20.5053 12.7491 20.5178 14.1275 20.4403C15.7286 20.3627 17.1495 19.9974 18.3203 18.8266C19.4936 17.6532 19.8563 16.2347 19.9338 14.6336C20.0139 13.2551 19.9989 11.8866 19.9989 10.5056ZM17.7974 16.4048C17.6148 16.8602 17.3947 17.2004 17.0419 17.5507C16.6892 17.9034 16.3515 18.1236 15.8962 18.3062C14.5803 18.8291 11.4558 18.7115 9.99731 18.7115C8.53885 18.7115 5.4118 18.8291 4.09593 18.3087C3.64064 18.1261 3.30041 17.9059 2.95018 17.5532C2.59745 17.2004 2.37731 16.8627 2.19469 16.4073C1.67434 15.0889 1.79192 11.9641 1.79192 10.5056C1.79192 9.04703 1.67434 5.91978 2.19469 4.60383C2.37731 4.1485 2.59745 3.80825 2.95018 3.458C3.30291 3.10775 3.64064 2.88509 4.09593 2.70246C5.4118 2.18208 8.53885 2.29967 9.99731 2.29967C11.4558 2.29967 14.5828 2.18208 15.8987 2.70246C16.354 2.88509 16.6942 3.10525 17.0444 3.458C17.3972 3.81076 17.6173 4.1485 17.7999 4.60383C18.3203 5.91978 18.2027 9.04703 18.2027 10.5056C18.2027 11.9641 18.3203 15.0889 17.7974 16.4048Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="12" height="21" viewBox="0 0 12 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.79563 20.506V11.3975H11.3496L11.8779 7.83125H7.79563V5.55967C7.79563 4.53058 8.12725 3.82599 9.83548 3.82599H12V0.646455C10.9468 0.548869 9.88824 0.501751 8.82905 0.505315C5.68766 0.505315 3.53085 2.16343 3.53085 5.20738V7.82458H0V11.3909H3.53856V20.506H7.79563Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="17" height="17" viewBox="0 0 17 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.329032 16.5059H3.61935V5.40535H0.329032V16.5059ZM1.97419 0.505127C0.877419 0.505127 0 1.30516 0 2.30521C0 3.30526 0.877419 4.10529 1.97419 4.10529C3.07097 4.10529 3.94839 3.30526 3.94839 2.30521C3.94839 1.30516 3.07097 0.505127 1.97419 0.505127ZM9.2129 7.10543V5.40535H5.92258V16.5059H9.2129V10.8056C9.2129 7.60545 13.7097 7.40544 13.7097 10.8056V16.5059H17V9.70555C17 4.3053 10.7484 4.50531 9.2129 7.10543Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="16" height="17" viewBox="0 0 16 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.52165 7.28029L15.4777 0.505127H14.066L8.89582 6.38768L4.76436 0.505127H0L6.2466 9.40153L0 16.5059H1.41166L6.87244 10.293L11.2356 16.5059H16L9.52165 7.28029ZM7.58885 9.47925L6.95596 8.5935L1.91986 1.54517H4.08793L8.15117 7.23343L8.78406 8.11919L14.0672 15.5138H11.8991L7.58885 9.47925Z"/>
+                      </svg>
+                    </div>
+                   </div>
+                </div>
+                  </div>
+                  <div class="flex flex-col items-center w-10/12 max-h-[390px] py-3 px-5 lg:-mt-12 bg-sky-100 rounded-3xl">
+                <img class="rounded-3xl" src="./src/img/dentist/dentist1.png.png" alt="">
+                <!-- Info -->
+                <div class="group flex flex-col items-center gap-y-3 w-10/12 min-h-12 -mt-4 hover:-mt-13 py-4 bg-white rounded-lg">
+                  <div class="flex flex-col items-center gap-y-1">
+                    <span class="font-danaDemiBold text-blue-600">دکتر آدولف هیتلر</span>
+                    <span class="text-xs font-danaMedium text-blue-950">دندانپزشک ارشد</span>
+                  </div>
+                  <!-- Hover  -->
+                   <div class="hidden items-center justify-center gap-x-3 w-full h-5 group-hover:flex">
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="20" height="21" viewBox="0 0 20 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99731 5.37438C7.15795 5.37438 4.86644 7.66604 4.86644 10.5056C4.86644 13.3451 7.15795 15.6368 9.99731 15.6368C12.8367 15.6368 15.1282 13.3451 15.1282 10.5056C15.1282 7.66604 12.8367 5.37438 9.99731 5.37438ZM9.99731 13.8405C8.16111 13.8405 6.66262 12.3419 6.66262 10.5056C6.66262 8.66926 8.16111 7.17068 9.99731 7.17068C11.8335 7.17068 13.332 8.66926 13.332 10.5056C13.332 12.3419 11.8335 13.8405 9.99731 13.8405ZM15.3383 3.96837C14.6754 3.96837 14.14 4.50376 14.14 5.16673C14.14 5.82971 14.6754 6.3651 15.3383 6.3651C16.0013 6.3651 16.5366 5.83221 16.5366 5.16673C16.5368 5.00931 16.5059 4.85339 16.4458 4.70791C16.3856 4.56242 16.2974 4.43024 16.1861 4.31892C16.0748 4.2076 15.9426 4.11934 15.7971 4.05919C15.6516 3.99903 15.4957 3.96817 15.3383 3.96837ZM19.9989 10.5056C19.9989 9.12459 20.0114 7.7561 19.9338 6.37761C19.8563 4.77645 19.4911 3.35543 18.3203 2.18458C17.147 1.01124 15.7286 0.648474 14.1275 0.570918C12.7466 0.493362 11.3782 0.505871 9.99981 0.505871C8.61891 0.505871 7.25051 0.493362 5.8721 0.570918C4.27105 0.648474 2.85012 1.01374 1.67935 2.18458C0.506076 3.35793 0.143338 4.77645 0.0657868 6.37761C-0.0117642 7.7586 0.000744099 9.12709 0.000744099 10.5056C0.000744099 11.8841 -0.0117642 13.2551 0.0657868 14.6336C0.143338 16.2347 0.508578 17.6557 1.67935 18.8266C2.85262 19.9999 4.27105 20.3627 5.8721 20.4403C7.25301 20.5178 8.62141 20.5053 9.99981 20.5053C11.3807 20.5053 12.7491 20.5178 14.1275 20.4403C15.7286 20.3627 17.1495 19.9974 18.3203 18.8266C19.4936 17.6532 19.8563 16.2347 19.9338 14.6336C20.0139 13.2551 19.9989 11.8866 19.9989 10.5056ZM17.7974 16.4048C17.6148 16.8602 17.3947 17.2004 17.0419 17.5507C16.6892 17.9034 16.3515 18.1236 15.8962 18.3062C14.5803 18.8291 11.4558 18.7115 9.99731 18.7115C8.53885 18.7115 5.4118 18.8291 4.09593 18.3087C3.64064 18.1261 3.30041 17.9059 2.95018 17.5532C2.59745 17.2004 2.37731 16.8627 2.19469 16.4073C1.67434 15.0889 1.79192 11.9641 1.79192 10.5056C1.79192 9.04703 1.67434 5.91978 2.19469 4.60383C2.37731 4.1485 2.59745 3.80825 2.95018 3.458C3.30291 3.10775 3.64064 2.88509 4.09593 2.70246C5.4118 2.18208 8.53885 2.29967 9.99731 2.29967C11.4558 2.29967 14.5828 2.18208 15.8987 2.70246C16.354 2.88509 16.6942 3.10525 17.0444 3.458C17.3972 3.81076 17.6173 4.1485 17.7999 4.60383C18.3203 5.91978 18.2027 9.04703 18.2027 10.5056C18.2027 11.9641 18.3203 15.0889 17.7974 16.4048Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="12" height="21" viewBox="0 0 12 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.79563 20.506V11.3975H11.3496L11.8779 7.83125H7.79563V5.55967C7.79563 4.53058 8.12725 3.82599 9.83548 3.82599H12V0.646455C10.9468 0.548869 9.88824 0.501751 8.82905 0.505315C5.68766 0.505315 3.53085 2.16343 3.53085 5.20738V7.82458H0V11.3909H3.53856V20.506H7.79563Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="17" height="17" viewBox="0 0 17 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.329032 16.5059H3.61935V5.40535H0.329032V16.5059ZM1.97419 0.505127C0.877419 0.505127 0 1.30516 0 2.30521C0 3.30526 0.877419 4.10529 1.97419 4.10529C3.07097 4.10529 3.94839 3.30526 3.94839 2.30521C3.94839 1.30516 3.07097 0.505127 1.97419 0.505127ZM9.2129 7.10543V5.40535H5.92258V16.5059H9.2129V10.8056C9.2129 7.60545 13.7097 7.40544 13.7097 10.8056V16.5059H17V9.70555C17 4.3053 10.7484 4.50531 9.2129 7.10543Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="16" height="17" viewBox="0 0 16 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.52165 7.28029L15.4777 0.505127H14.066L8.89582 6.38768L4.76436 0.505127H0L6.2466 9.40153L0 16.5059H1.41166L6.87244 10.293L11.2356 16.5059H16L9.52165 7.28029ZM7.58885 9.47925L6.95596 8.5935L1.91986 1.54517H4.08793L8.15117 7.23343L8.78406 8.11919L14.0672 15.5138H11.8991L7.58885 9.47925Z"/>
+                      </svg>
+                    </div>
+                   </div>
+                </div>
+                  </div>
+                  <div class="flex flex-col items-center w-10/12 max-h-[390px] py-3 px-5 bg-sky-100 rounded-3xl">
+                <img class="rounded-3xl" src="./src/img/dentist/dentist1.png.png" alt="">
+                <!-- Info -->
+                <div class="group flex flex-col items-center gap-y-3 w-10/12 min-h-12 -mt-4 hover:-mt-13 py-4 bg-white rounded-lg">
+                  <div class="flex flex-col items-center gap-y-1">
+                    <span class="font-danaDemiBold text-blue-600">دکتر آدولف هیتلر</span>
+                    <span class="text-xs font-danaMedium text-blue-950">دندانپزشک ارشد</span>
+                  </div>
+                  <!-- Hover  -->
+                   <div class="hidden items-center justify-center gap-x-3 w-full h-5 group-hover:flex">
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="20" height="21" viewBox="0 0 20 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99731 5.37438C7.15795 5.37438 4.86644 7.66604 4.86644 10.5056C4.86644 13.3451 7.15795 15.6368 9.99731 15.6368C12.8367 15.6368 15.1282 13.3451 15.1282 10.5056C15.1282 7.66604 12.8367 5.37438 9.99731 5.37438ZM9.99731 13.8405C8.16111 13.8405 6.66262 12.3419 6.66262 10.5056C6.66262 8.66926 8.16111 7.17068 9.99731 7.17068C11.8335 7.17068 13.332 8.66926 13.332 10.5056C13.332 12.3419 11.8335 13.8405 9.99731 13.8405ZM15.3383 3.96837C14.6754 3.96837 14.14 4.50376 14.14 5.16673C14.14 5.82971 14.6754 6.3651 15.3383 6.3651C16.0013 6.3651 16.5366 5.83221 16.5366 5.16673C16.5368 5.00931 16.5059 4.85339 16.4458 4.70791C16.3856 4.56242 16.2974 4.43024 16.1861 4.31892C16.0748 4.2076 15.9426 4.11934 15.7971 4.05919C15.6516 3.99903 15.4957 3.96817 15.3383 3.96837ZM19.9989 10.5056C19.9989 9.12459 20.0114 7.7561 19.9338 6.37761C19.8563 4.77645 19.4911 3.35543 18.3203 2.18458C17.147 1.01124 15.7286 0.648474 14.1275 0.570918C12.7466 0.493362 11.3782 0.505871 9.99981 0.505871C8.61891 0.505871 7.25051 0.493362 5.8721 0.570918C4.27105 0.648474 2.85012 1.01374 1.67935 2.18458C0.506076 3.35793 0.143338 4.77645 0.0657868 6.37761C-0.0117642 7.7586 0.000744099 9.12709 0.000744099 10.5056C0.000744099 11.8841 -0.0117642 13.2551 0.0657868 14.6336C0.143338 16.2347 0.508578 17.6557 1.67935 18.8266C2.85262 19.9999 4.27105 20.3627 5.8721 20.4403C7.25301 20.5178 8.62141 20.5053 9.99981 20.5053C11.3807 20.5053 12.7491 20.5178 14.1275 20.4403C15.7286 20.3627 17.1495 19.9974 18.3203 18.8266C19.4936 17.6532 19.8563 16.2347 19.9338 14.6336C20.0139 13.2551 19.9989 11.8866 19.9989 10.5056ZM17.7974 16.4048C17.6148 16.8602 17.3947 17.2004 17.0419 17.5507C16.6892 17.9034 16.3515 18.1236 15.8962 18.3062C14.5803 18.8291 11.4558 18.7115 9.99731 18.7115C8.53885 18.7115 5.4118 18.8291 4.09593 18.3087C3.64064 18.1261 3.30041 17.9059 2.95018 17.5532C2.59745 17.2004 2.37731 16.8627 2.19469 16.4073C1.67434 15.0889 1.79192 11.9641 1.79192 10.5056C1.79192 9.04703 1.67434 5.91978 2.19469 4.60383C2.37731 4.1485 2.59745 3.80825 2.95018 3.458C3.30291 3.10775 3.64064 2.88509 4.09593 2.70246C5.4118 2.18208 8.53885 2.29967 9.99731 2.29967C11.4558 2.29967 14.5828 2.18208 15.8987 2.70246C16.354 2.88509 16.6942 3.10525 17.0444 3.458C17.3972 3.81076 17.6173 4.1485 17.7999 4.60383C18.3203 5.91978 18.2027 9.04703 18.2027 10.5056C18.2027 11.9641 18.3203 15.0889 17.7974 16.4048Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="12" height="21" viewBox="0 0 12 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.79563 20.506V11.3975H11.3496L11.8779 7.83125H7.79563V5.55967C7.79563 4.53058 8.12725 3.82599 9.83548 3.82599H12V0.646455C10.9468 0.548869 9.88824 0.501751 8.82905 0.505315C5.68766 0.505315 3.53085 2.16343 3.53085 5.20738V7.82458H0V11.3909H3.53856V20.506H7.79563Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="17" height="17" viewBox="0 0 17 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.329032 16.5059H3.61935V5.40535H0.329032V16.5059ZM1.97419 0.505127C0.877419 0.505127 0 1.30516 0 2.30521C0 3.30526 0.877419 4.10529 1.97419 4.10529C3.07097 4.10529 3.94839 3.30526 3.94839 2.30521C3.94839 1.30516 3.07097 0.505127 1.97419 0.505127ZM9.2129 7.10543V5.40535H5.92258V16.5059H9.2129V10.8056C9.2129 7.60545 13.7097 7.40544 13.7097 10.8056V16.5059H17V9.70555C17 4.3053 10.7484 4.50531 9.2129 7.10543Z"/>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="16" height="17" viewBox="0 0 16 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.52165 7.28029L15.4777 0.505127H14.066L8.89582 6.38768L4.76436 0.505127H0L6.2466 9.40153L0 16.5059H1.41166L6.87244 10.293L11.2356 16.5059H16L9.52165 7.28029ZM7.58885 9.47925L6.95596 8.5935L1.91986 1.54517H4.08793L8.15117 7.23343L8.78406 8.11919L14.0672 15.5138H11.8991L7.58885 9.47925Z"/>
+                      </svg>
+                    </div>
+                   </div>
+                </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Cta  -->
+               <section class="flex flex-col items-center justify-center md:flex-row w-full md:h-[300px] lg:h-[390px] mt-12 bg-sky-300 rounded-3xl">
+                <!-- Text  -->
+                 <div class="flex flex-col items-center md:items-start gap-y-3 min-[560px]:gap-y-6 md:gap-y-4 lg:gap-y-5 xl:gap-y-6 px-8 py-8">
+                  <span class="min-[560px]:text-xl md:text-sm lg:text-xl xl:text-2xl font-danaDemiBold text-orange-400">همین حالا وقت بگیر</span>
+                  <h5 class="text-center md:text-start text-2xl min-[560px]:text-4xl md:text-2xl lg:text-4xl xl:text-5xl font-MorabbaBold text-blue-950">دریافت <span class="text-blue-600">10% تخفیف</span> برای <br> اولین ویزیت</h5>
+                  <p class="self-center text-xs/4 min-[560px]:text-base md:text-xs lg:text-base xl:text-lg font-danaMedium text-blue-950/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                  <button class="flex justify-center items-center gap-x-1.5 w-32 min-[560px]:w-42 md:w-32 lg:w-42 h-9 min-[560px]:h-11 md:h-9 lg:h-11 text-lg min-[560px]:text-2xl md:text-lg lg:text-2xl font-danaDemiBold bg-blue-600 text-white rounded-4xl">
+                    همین حالا
+                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- Image -->
+                 <img class="max-[519px]:-mb-[17px] max-[768px]:-mb-[25px] md:-mt-11 lg:-mt-[59px] md:size-[380px] lg:size-[500px]" src="./src/img/Group 55.png" alt="">
+               </section>
+               <!-- Comment -->
+                <Section class="flex flex-col items-center lg:items-start mt-12">
+                  <!-- Text -->
+                   <div class="flex flex-col items-center lg:items-start gap-y-3">
+                    <span class="text-lg lg:text-3xl font-danaDemiBold text-orange-400">اعتماد شما</span>
+                    <h5 class="text-center lg:text-right text-2xl lg:text-4xl font-MorabbaBold text-blue-950"> بهبود لبخند و <span class="text-blue-600"> اعتماد به نفس </span><br>شما کار ماست</h5>
+                   </div>
+                   <!-- Content  -->
+                    <div class="flex flex-col lg:flex-row lg:justify-between gap-x-12">
+                      <!-- Image -->
+                     <img src="./src/img/Comment.png" alt="">
+                     <!-- CommentItem  -->
+                      <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-12">
+                        <!-- Item -->
+                        <div class="relative flex flex-col justify-between bg-white w-full h-[230px] pt-12 pb-4 px-6 rounded-2xl">
+                          <!-- Profile  -->
+                           <div class="absolute -top-7 right-7 flex items-center justify-center p-1.5 bg-sky-200 rounded-xl">
+                            <img class="size-12" src="./src/img/Comment/Mask group.png" alt="">
+                           </div>
+                           <!-- Score  -->
+                            <div class="flex ">
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-700/60" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                            </div>
+                            <!-- Text -->
+                             <p class="text-sm font-danaRegular">
+                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرایک است
+                             </p>
+                             <!-- Info -->
+                              <div class="flex flex-col gap-y-0.5">
+                                <span class="text-sm font-danaDemiBold text-blue-600">آدولف هیتلر</span>
+                                <span class="text-xs font-danaMedium text-blue-600/80">بیمار</span>
+                              </div>
+                        </div>
+                        <div class="relative flex flex-col justify-between bg-white w-full h-[230px] pt-12 pb-4 px-6 md:-mt-8 rounded-2xl">
+                          <!-- Profile  -->
+                           <div class="absolute -top-7 right-7 flex items-center justify-center p-1.5 bg-sky-200 rounded-xl">
+                            <img class="size-12" src="./src/img/Comment/Mask group-1.png" alt="">
+                           </div>
+                           <!-- Score  -->
+                            <div class="flex ">
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-700/60" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                            </div>
+                            <!-- Text -->
+                             <p class="text-sm font-danaRegular">
+                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرایک است
+                             </p>
+                             <!-- Info -->
+                              <div class="flex flex-col gap-y-0.5">
+                                <span class="text-sm font-danaDemiBold text-blue-600">آدولف هیتلر</span>
+                                <span class="text-xs font-danaMedium text-blue-600/80">بیمار</span>
+                              </div>
+                        </div>
+                        <div class="relative flex flex-col justify-between bg-white w-full h-[230px] pt-12 pb-4 px-6 rounded-2xl">
+                          <!-- Profile  -->
+                           <div class="absolute -top-7 right-7 flex items-center justify-center p-1.5 bg-sky-200 rounded-xl">
+                            <img class="size-12" src="./src/img/Comment/Mask group-2.png" alt="">
+                           </div>
+                           <!-- Score  -->
+                            <div class="flex ">
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-700/60" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                            </div>
+                            <!-- Text -->
+                             <p class="text-sm font-danaRegular">
+                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرایک است
+                             </p>
+                             <!-- Info -->
+                              <div class="flex flex-col gap-y-0.5">
+                                <span class="text-sm font-danaDemiBold text-blue-600">آدولف هیتلر</span>
+                                <span class="text-xs font-danaMedium text-blue-600/80">بیمار</span>
+                              </div>
+                        </div>
+                        <div class="relative flex flex-col justify-between bg-white w-full h-[230px] pt-12 pb-4 px-6 md:-mt-8 rounded-2xl">
+                          <!-- Profile  -->
+                           <div class="absolute -top-7 right-7 flex items-center justify-center p-1.5 bg-sky-200 rounded-xl">
+                            <img class="size-12" src="./src/img/Comment/Mask group-3.png" alt="">
+                           </div>
+                           <!-- Score  -->
+                            <div class="flex ">
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                              <svg class="size-6 text-amber-700/60" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                              </svg>
+                            </div>
+                            <!-- Text -->
+                             <p class="text-sm font-danaRegular">
+                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرایک است
+                             </p>
+                             <!-- Info -->
+                              <div class="flex flex-col gap-y-0.5">
+                                <span class="text-sm font-danaDemiBold text-blue-600">آدولف هیتلر</span>
+                                <span class="text-xs font-danaMedium text-blue-600/80">بیمار</span>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                </Section>
+               <!-- Blog  -->
+                <section class="flex flex-col items-start gap-y-8 mt-12 mb">
+                  <!-- Header  -->
+                  <div class="flex flex-col gap-y-5 w-full">
+                    <span class="text-xl lg:text-2xl font-danaDemiBold text-orange-400">وبلاگ ما</span>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-y-3">
+                      <span class="text-xl lg:text-2xl font-MorabbaBold text-blue-600">آخرین مقالات و اخبار ما</span>
+                      <button class="flex justify-center items-center gap-x-1 px-3 py-2 lg:px-5 lg:py-3 text-sm lg:text-lg font-danaDemiBold bg-blue-600 text-white rounded-4xl">
+                    مشاهده بیشتر
+                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+                    </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Item  -->
+                   <div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 gap-4 w-full">
+                    <div class="flex flex-col items-start justify-end gap-y-3 px-8 pb-5 h-[240px] lg:h-[400px] row-span-2 lg:col-span-1 blog-1 rounded-3xl">
+                      <span class="font-danaDemiBold text-sky-100">15 آبان, 1404</span>
+                      <p class="max-w-[300px] font-danaMedium text-white">موضوع: مزایای معاینات روتین دندانپزشکی در کودکان زیر 12 سال</p>
+                      <span class="flex items-center font-danaDemiBold text-blue-600">بیشتر بخوانید
+                        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="flex flex-col items-start justify-end gap-y-3 px-8 pb-5 max-[1024px]:h-[150px] lg:col-span-1 blog-2 rounded-3xl">
+                      <span class="font-danaDemiBold text-sky-100"> 1 تیر, 1404</span>
+                      <p class="max-w-[300px] font-danaMedium text-white">موضوع: مزایای معاینات روتین دندانپزشکی در کودکان زیر 12 سال</p>
+                      <span class="flex items-center font-danaDemiBold text-blue-600">بیشتر بخوانید
+                        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="flex flex-col items-start justify-end gap-y-3 px-8 pb-5 max-[1024px]:h-[150px] lg:col-span-1 blog-3 rounded-3xl">
+                      <span class="font-danaDemiBold text-sky-100">15 آبان, 1404</span>
+                      <p class="max-w-[300px] font-danaMedium text-white">موضوع: مزایای معاینات روتین دندانپزشکی در کودکان زیر 12 سال</p>
+                      <span class="flex items-center font-danaDemiBold text-blue-600">بیشتر بخوانید
+                        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+                        </svg>
+                      </span>
+                    </div>
+                    
+                   </div>
+                </section>
+      </main>
+
+      <!-- Footer  -->
+       <footer class="flex flex-col items-center w-full mt-12 py-10 px-8 bg-sky-200">
+        <div class="w-full xl:w-7xl">
+          <!-- Logo & Social -->
+          <div class="flex flex-col items-start gap-y-6 md:flex-row md:items-end md:justify-between w-full mb-6 md:pb-8 md:border-b md:border-b-blue-600/40">
+          <div class="flex flex-col gap-y-3">
+           <div class="flex items-center gap-x-2.5">
+            <img class="size-8" src="./src/img/Frame.svg" alt="">
+            <div class="flex flex-col">
+                <span class="text-base text-blue-800 font-MorabbaBold">کانفی دنت</span>
+                <span class="text-xs font-danaMedium text-blue-500">کلینینک دندان</span>
+            </div>
+           </div>
+          <div class="relative w-36 min-[430px]:w-52 sm:w-64 md:w-82 h-9 bg-white rounded-4xl">
+           <span class="pr-2 text-xs/9 font-danaMedium text-blue-700/40">ایمیلتو وارد کن</span>
+           <div class="absolute w-8 h-7 top-1 left-1.5 flex items-center justify-center border-2 border-blue-600 rounded-full">
+            <svg class="size-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+            </svg>
+           </div>
+         </div>
+          </div>
+          <span class="w-full h-[1px] bg-blue-600/40 md:hidden"></span>
+          <div class="flex items-center gap-x-2">
+                <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 md:size-9 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="20" height="21" viewBox="0 0 20 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99731 5.37438C7.15795 5.37438 4.86644 7.66604 4.86644 10.5056C4.86644 13.3451 7.15795 15.6368 9.99731 15.6368C12.8367 15.6368 15.1282 13.3451 15.1282 10.5056C15.1282 7.66604 12.8367 5.37438 9.99731 5.37438ZM9.99731 13.8405C8.16111 13.8405 6.66262 12.3419 6.66262 10.5056C6.66262 8.66926 8.16111 7.17068 9.99731 7.17068C11.8335 7.17068 13.332 8.66926 13.332 10.5056C13.332 12.3419 11.8335 13.8405 9.99731 13.8405ZM15.3383 3.96837C14.6754 3.96837 14.14 4.50376 14.14 5.16673C14.14 5.82971 14.6754 6.3651 15.3383 6.3651C16.0013 6.3651 16.5366 5.83221 16.5366 5.16673C16.5368 5.00931 16.5059 4.85339 16.4458 4.70791C16.3856 4.56242 16.2974 4.43024 16.1861 4.31892C16.0748 4.2076 15.9426 4.11934 15.7971 4.05919C15.6516 3.99903 15.4957 3.96817 15.3383 3.96837ZM19.9989 10.5056C19.9989 9.12459 20.0114 7.7561 19.9338 6.37761C19.8563 4.77645 19.4911 3.35543 18.3203 2.18458C17.147 1.01124 15.7286 0.648474 14.1275 0.570918C12.7466 0.493362 11.3782 0.505871 9.99981 0.505871C8.61891 0.505871 7.25051 0.493362 5.8721 0.570918C4.27105 0.648474 2.85012 1.01374 1.67935 2.18458C0.506076 3.35793 0.143338 4.77645 0.0657868 6.37761C-0.0117642 7.7586 0.000744099 9.12709 0.000744099 10.5056C0.000744099 11.8841 -0.0117642 13.2551 0.0657868 14.6336C0.143338 16.2347 0.508578 17.6557 1.67935 18.8266C2.85262 19.9999 4.27105 20.3627 5.8721 20.4403C7.25301 20.5178 8.62141 20.5053 9.99981 20.5053C11.3807 20.5053 12.7491 20.5178 14.1275 20.4403C15.7286 20.3627 17.1495 19.9974 18.3203 18.8266C19.4936 17.6532 19.8563 16.2347 19.9338 14.6336C20.0139 13.2551 19.9989 11.8866 19.9989 10.5056ZM17.7974 16.4048C17.6148 16.8602 17.3947 17.2004 17.0419 17.5507C16.6892 17.9034 16.3515 18.1236 15.8962 18.3062C14.5803 18.8291 11.4558 18.7115 9.99731 18.7115C8.53885 18.7115 5.4118 18.8291 4.09593 18.3087C3.64064 18.1261 3.30041 17.9059 2.95018 17.5532C2.59745 17.2004 2.37731 16.8627 2.19469 16.4073C1.67434 15.0889 1.79192 11.9641 1.79192 10.5056C1.79192 9.04703 1.67434 5.91978 2.19469 4.60383C2.37731 4.1485 2.59745 3.80825 2.95018 3.458C3.30291 3.10775 3.64064 2.88509 4.09593 2.70246C5.4118 2.18208 8.53885 2.29967 9.99731 2.29967C11.4558 2.29967 14.5828 2.18208 15.8987 2.70246C16.354 2.88509 16.6942 3.10525 17.0444 3.458C17.3972 3.81076 17.6173 4.1485 17.7999 4.60383C18.3203 5.91978 18.2027 9.04703 18.2027 10.5056C18.2027 11.9641 18.3203 15.0889 17.7974 16.4048Z"></path>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 md:size-9 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="12" height="21" viewBox="0 0 12 21" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.79563 20.506V11.3975H11.3496L11.8779 7.83125H7.79563V5.55967C7.79563 4.53058 8.12725 3.82599 9.83548 3.82599H12V0.646455C10.9468 0.548869 9.88824 0.501751 8.82905 0.505315C5.68766 0.505315 3.53085 2.16343 3.53085 5.20738V7.82458H0V11.3909H3.53856V20.506H7.79563Z"></path>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 md:size-9 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="17" height="17" viewBox="0 0 17 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.329032 16.5059H3.61935V5.40535H0.329032V16.5059ZM1.97419 0.505127C0.877419 0.505127 0 1.30516 0 2.30521C0 3.30526 0.877419 4.10529 1.97419 4.10529C3.07097 4.10529 3.94839 3.30526 3.94839 2.30521C3.94839 1.30516 3.07097 0.505127 1.97419 0.505127ZM9.2129 7.10543V5.40535H5.92258V16.5059H9.2129V10.8056C9.2129 7.60545 13.7097 7.40544 13.7097 10.8056V16.5059H17V9.70555C17 4.3053 10.7484 4.50531 9.2129 7.10543Z"></path>
+                    </svg>
+                    </div>
+                    <div class="border border-blue-600 hover:bg-blue-600 rounded-full transition-colors duration-150 delay-100">
+                      <svg class="size-7 md:size-9 p-1.5 text-blue-600 hover:text-white transition-colors duration-150 delay-100" width="16" height="17" viewBox="0 0 16 17" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.52165 7.28029L15.4777 0.505127H14.066L8.89582 6.38768L4.76436 0.505127H0L6.2466 9.40153L0 16.5059H1.41166L6.87244 10.293L11.2356 16.5059H16L9.52165 7.28029ZM7.58885 9.47925L6.95596 8.5935L1.91986 1.54517H4.08793L8.15117 7.23343L8.78406 8.11919L14.0672 15.5138H11.8991L7.58885 9.47925Z"></path>
+                      </svg>
+                    </div>
+          </div>
+          </div>
+          <!-- Menu & Hours & CopyR -->
+           <div class="flex flex-col md:flex-row md:justify-between w-full">
+            <!-- Hours & Desktop-Tablet CopyR -->
+             <div class="flex flex-col items-start justify-between max-[768px]:mb-7">
+              <!-- Hours  -->
+               <div class="flex flex-col items-start gap-y-2.5 w-full">
+                <span class="lg:text-xl font-danaDemiBold text-blue-950">ساعت کاری</span>
+                <div class="flex items-center justify-between w-full pb-0.5 text-xs min-[410px]:text-sm min-[470px]:text-base lg:text-lg font-danaMedium text-blue-600 border-b border-b-blue-600">
+                  <span>شنبه تا چهارشنبه</span>
+                  <span>9 صبح تا 8 غروب</span>
+                </div>
+                <div class="flex items-center justify-between w-full pb-0.5 text-xs min-[410px]:text-sm min-[470px]:text-base lg:text-lg font-danaMedium text-blue-600 border-b border-b-blue-600">
+                  <span>پنج شنبه و جمعه</span>
+                  <span>11ظهر تا 6 عصر</span>
+                </div>
+               </div>
+               <!-- CopyR -->
+                <span class="hidden md:inline font-danaRegular text-blue-950">© 2024 تمامی حقوق کانفی دنت محفوظ است</span>
+             </div>
+             <!-- Menu  -->
+              <div class="flex items-start justify-between md:gap-x-5 lg:gap-x-12 xl:gap-x-15 text-xs min-[410px]:text-sm min-[470px]:text-base lg:text-xl max-[768px]:mb-4 max-[768px]:pb-3 max-[768px]:border-b border-b-blue-950/50">
+                <!-- About Us  -->
+                 <div class="flex flex-col gap-y-3 text-blue-950">
+                  <span class="font-MorabbaMedium">درباره ی ما</span>
+                  <div class="flex flex-col items-start gap-y-1 font-danaMedium">
+                    <a href="">خانه</a>
+                    <a href="">درباره ی ما</a>
+                    <a href="">سرویس ها</a>
+                    <a href="">صفحات</a>
+                    <a href="">ارتباط</a>
+                  </div>
+                 </div>
+                 <!-- Pages -->
+                 <div class="flex flex-col gap-y-3 text-blue-950">
+                  <span class="font-MorabbaMedium">صفحات</span>
+                  <div class="flex flex-col items-start gap-y-1 font-danaMedium">
+                    <a href="">سرویس ها</a>
+                    <a href="">دندانپزشک ها</a>
+                    <a href="">لیست قیمت</a>
+                    <a href="">ارتباط</a>
+                    <a href="">صفحه 404</a>
+                  </div>
+                 </div>
+                 <!-- Suppot -->
+                  <div class="flex flex-col gap-y-3 text-blue-950">
+                  <span class="font-MorabbaMedium">پشتیبانی</span>
+                  <div class="flex flex-col items-start gap-y-1 font-danaMedium">
+                    <a href="">ارتباط با ما</a>
+                    <a href="">رزور آنلاین</a>
+                    <a href="">سوشیال مدیا</a>
+                  </div>
+                 </div>
+                 <div class="flex flex-col gap-y-3 text-blue-950">
+                  <span class="font-MorabbaMedium">تماس با</span>
+                  <div class="flex flex-col items-start gap-y-1 font-danaMedium">
+                    <a href="">سوشیال مدیا</a>
+                    <a href="">واتساپ</a>
+                    <a href="">ایمیل</a>
+                  </div>
+                 </div>
+              </div>
+              <!-- Mobile CopyR -->
+              <span class="inline md:hidden font-danaRegular text-blue-950">© 2024 تمامی حقوق کانفی دنت محفوظ است</span>  
+           </div>
+        </div>        
+       </footer>
+
+      <!-- Swiper JS -->
+      <script src="./js/swiper-bundle.min.js"></script>
+      <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 50,
+              breakpoints: {
+          640: {
+            slidesPerView: 3,
+          },
+          768: {
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 60,
+          },
+        },
+        autoplay: {
+        delay: 1000,
+        },
+      freeMode: false,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  </body>
+</html>
