@@ -105,6 +105,14 @@
     height: 1px;
  }
 }
+@layer components{
+        .overlay{
+        @apply opacity-0 invisible min-[970px]:hidden fixed inset-0 bg-black/40 z-10 transition-all duration-300
+    }
+    .overlay--visible{
+        @apply opacity-100 visible
+    }
+}
 @theme{
     --font-danaRegular:danaRegular;
     --font-danaMedium:danaMedium;
